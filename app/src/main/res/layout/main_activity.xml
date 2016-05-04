@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2016 Zhang Hai <Dreaming.in.Code.ZH@Gmail.com>
+  ~ All Rights Reserved.
+  -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="me.zhanghai.android.douya.apikey.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/screen_edge_horizontal_margin"
+            android:layout_marginRight="@dimen/screen_edge_horizontal_margin"
+            android:layout_marginTop="@dimen/screen_edge_vertical_margin"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="?android:textColorPrimaryInverse" />
+
+        <me.zhanghai.android.douya.apikey.FriendlyCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/card_horizontal_margin"
+            android:layout_marginRight="@dimen/card_horizontal_margin"
+            android:layout_marginTop="@dimen/card_vertical_margin"
+            android:layout_marginBottom="@dimen/card_vertical_margin_half">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:actionBarSize"
+                    android:paddingLeft="@dimen/card_content_horizontal_margin"
+                    android:paddingRight="@dimen/card_content_horizontal_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/install_douya_title"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ok_icon_green_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/card_content_horizontal_margin"
+                        android:layout_marginRight="@dimen/card_content_horizontal_margin"
+                        android:text="@string/install_douya_description"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="@dimen/card_action_margin_with_4dp_padding"
+                        android:layout_marginRight="@dimen/card_action_margin_with_4dp_padding"
+                        android:layout_marginTop="@dimen/card_action_margin"
+                        android:layout_marginBottom="@dimen/card_action_margin"
+                        android:text="@string/install_douya_action"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+                </LinearLayout>
+            </LinearLayout>
+        </me.zhanghai.android.douya.apikey.FriendlyCardView>
+
+        <me.zhanghai.android.douya.apikey.FriendlyCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/card_horizontal_margin"
+            android:layout_marginRight="@dimen/card_horizontal_margin"
+            android:layout_marginTop="@dimen/card_vertical_margin_half"
+            android:layout_marginBottom="@dimen/card_vertical_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:actionBarSize"
+                    android:paddingLeft="@dimen/card_content_horizontal_margin"
+                    android:paddingRight="@dimen/card_content_horizontal_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/get_api_key"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ok_icon_green_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/card_content_horizontal_margin"
+                    android:paddingRight="@dimen/card_content_horizontal_margin"
+                    android:paddingBottom="@dimen/card_content_vertical_margin"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/api_key"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+                    <EditText
+                        android:id="@+id/api_secret"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                </LinearLayout>
+            </LinearLayout>
+        </me.zhanghai.android.douya.apikey.FriendlyCardView>
+    </LinearLayout>
+</ScrollView>

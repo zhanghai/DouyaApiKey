@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2016 Zhang Hai <Dreaming.in.Code.ZH@Gmail.com>
+  ~ All Rights Reserved.
+  -->
+
+<resources>
+
+    <string name="app_name">豆芽 API Key</string>
+
+    <string name="install_douya_title">安装豆芽</string>
+    <string name="install_douya_description">明明是她先来的！</string>
+    <string name="install_douya_action">快去安装</string>
+    <string name="get_api_key">获取 API Key</string>
+
+    <string name="error_frodo_not_found">获取失败，未安装官方豆瓣 App。</string>
+    <string name="error_decryption">解密失败，官方可能更改了实现。</string>
+    <string name="error_unexpected">未预期的错误。</string>
+</resources>

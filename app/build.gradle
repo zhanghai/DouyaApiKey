@@ -1,0 +1,32 @@
+/*
+ * Copyright (c) 2016 Zhang Hai <Dreaming.in.Code.ZH@Gmail.com>
+ * All Rights Reserved.
+ */
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "me.zhanghai.android.douya.apikey"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:cardview-v7:23.3.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+}
