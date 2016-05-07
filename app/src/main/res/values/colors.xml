@@ -6,7 +6,14 @@
   -->
 
 <resources>
+
     <color name="colorPrimary">#4caf50</color>
     <color name="colorPrimaryDark">#388e3c</color>
     <color name="colorAccent">#4caf50</color>
+
+    <color name="wizard_statusbar_background">@color/wizard_header_background</color>
+    <color name="wizard_header_background">@color/colorPrimary</color>
+    <color name="wizard_title_background">#43a047</color>
+    <color name="wizard_content_background">#fafafa</color>
+    <color name="wizard_buttonbar_background">#e4e7e9</color>
 </resources>

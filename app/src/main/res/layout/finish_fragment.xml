@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2016 Zhang Hai <Dreaming.in.Code.ZH@Gmail.com>
+  ~ All Rights Reserved.
+  -->
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/wizard_content_horizontal_margin"
+            android:layout_marginRight="@dimen/wizard_content_horizontal_margin"
+            android:layout_marginTop="@dimen/wizard_content_vertical_margin"
+            android:text="@string/finish_content"
+            android:textAppearance="@style/TextAppearance.Wizard.Content" />
+    </LinearLayout>
+</ScrollView>

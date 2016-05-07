@@ -7,16 +7,11 @@
 
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="TextAppearance.Wizard.Title" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">@dimen/wizard_title_text_size</item>
+    </style>
 
-        <item name="windowActionModeOverlay">true</item>
-        <item name="android:windowBackground">?colorPrimary</item>
-
-        <item name="dividerHorizontal">?android:dividerHorizontal</item>
-        <item name="dividerVertical">?android:dividerVertical</item>
-
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="TextAppearance.Wizard.Content" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">@dimen/wizard_content_text_size</item>
     </style>
 </resources>

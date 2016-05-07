@@ -7,33 +7,20 @@
 
 <resources>
 
-    <dimen name="screen_edge_horizontal_margin">16dp</dimen>
-    <dimen name="screen_edge_vertical_margin">16dp</dimen>
+    <item name="wizard_header_ratio" type="dimen" format="string">16:9</item>
+    <dimen name="wizard_header_elevation">4dp</dimen>
 
-    <dimen name="card_shadow_horizontal_margin">-2dp</dimen>
-    <dimen name="card_shadow_vertical_margin">-3dp</dimen>
+    <dimen name="wizard_title_height">64dp</dimen>
+    <dimen name="wizard_title_text_size">24sp</dimen>
 
-    <dimen name="card_horizontal_margin">14dp</dimen>
-    <dimen name="card_vertical_margin">13dp</dimen>
-    <dimen name="card_vertical_margin_half">5dp</dimen>
+    <dimen name="wizard_content_horizontal_margin">40dp</dimen>
+    <dimen name="wizard_content_horizontal_margin_with_4dp_padding">36dp</dimen>
+    <dimen name="wizard_content_horizontal_margin_with_8dp_padding">32dp</dimen>
+    <dimen name="wizard_content_horizontal_margin_with_12dp_padding">28dp</dimen>
+    <dimen name="wizard_content_vertical_margin">24dp</dimen>
+    <dimen name="wizard_content_vertical_margin_with_8dp_padding">16dp</dimen>
+    <dimen name="wizard_content_vertical_margin_with_16dp_padding">8dp</dimen>
+    <dimen name="wizard_content_text_size">16sp</dimen>
 
-    <dimen name="card_content_horizontal_margin">16dp</dimen>
-    <dimen name="card_content_horizontal_margin_with_4dp_padding">12dp</dimen>
-    <dimen name="card_content_horizontal_margin_with_8dp_padding">8dp</dimen>
-    <dimen name="card_content_horizontal_margin_with_12dp_padding">4dp</dimen>
-    <dimen name="card_content_horizontal_space">16dp</dimen>
-    <dimen name="card_content_horizontal_space_with_4dp_padding">12dp</dimen>
-    <dimen name="card_content_horizontal_space_with_12dp_padding">4dp</dimen>
-    <dimen name="card_content_horizontal_space_with_16dp_padding">0dp</dimen>
-    <dimen name="card_content_vertical_margin_large">24dp</dimen>
-    <dimen name="card_content_vertical_margin">16dp</dimen>
-    <dimen name="card_content_vertical_margin_with_4dp_padding">12dp</dimen>
-    <dimen name="card_content_vertical_margin_with_12dp_padding">4dp</dimen>
-    <dimen name="card_content_vertical_margin_small">8dp</dimen>
-    <dimen name="card_content_vertical_space">16dp</dimen>
-    <dimen name="card_content_vertical_space_with_4dp_padding">12dp</dimen>
-
-    <dimen name="card_action_margin">8dp</dimen>
-    <dimen name="card_action_margin_with_4dp_padding">4dp</dimen>
-    <dimen name="card_action_margin_with_8dp_padding">0dp</dimen>
+    <dimen name="wizard_buttonbar_height">56dp</dimen>
 </resources>
