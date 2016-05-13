@@ -7,11 +7,11 @@ package me.zhanghai.android.douya.apikey;
 
 import android.content.Context;
 
-public class DouyaAppUtils {
+public class DouyaUtils {
 
     public static final String PACKAGE_NAME = "me.zhanghai.android.douya";
 
-    private DouyaAppUtils() {}
+    private DouyaUtils() {}
 
     public static boolean isInstalled(Context context) {
         return PackageUtils.isPackageInstalled(PACKAGE_NAME, context);

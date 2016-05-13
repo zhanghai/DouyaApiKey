@@ -32,7 +32,7 @@ public class FinishFragment extends Fragment implements WizardContentFragment {
 
     @Override
     public void onForward() {
-        DouyaAppUtils.launch(getActivity());
+        DouyaUtils.launch(getActivity());
         getActivity().finish();
     }
 }

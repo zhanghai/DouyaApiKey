@@ -83,7 +83,7 @@ public class InstallDouyaFragment extends Fragment implements WizardContentFragm
         if (isDouyaInstalled()) {
             activity.replaceFragment(new ApiKeyFragment());
         } else {
-            DouyaAppUtils.installApp(activity);
+            DouyaUtils.installApp(activity);
         }
     }
 
@@ -99,6 +99,6 @@ public class InstallDouyaFragment extends Fragment implements WizardContentFragm
     }
 
     private boolean isDouyaInstalled() {
-        return DouyaAppUtils.isInstalled(getActivity());
+        return DouyaUtils.isInstalled(getActivity());
     }
 }

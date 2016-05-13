@@ -134,23 +134,23 @@ public class ApiKeyFragment extends Fragment implements WizardContentFragment {
                 ToastUtils.show(R.string.api_key_error_empty, activity);
                 return;
             }
-            DouyaAppUtils.setApiKeyAndSecret(apiKey, apiSecret);
+            DouyaUtils.setApiKeyAndSecret(apiKey, apiSecret);
             activity.replaceFragment(new FinishFragment());
 
         } else {
 
             refreshDouban();
             if (isDoubanInstalled()) {
-                DoubanAppUtils.GetApiKeyAndSecretReturnValue returnValue =
-                        DoubanAppUtils.getApiKeyAndSecret(activity);
+                DoubanUtils.GetApiKeyAndSecretReturnValue returnValue =
+                        DoubanUtils.getApiKeyAndSecret(activity);
                 if (!returnValue.isSuccessful) {
                     ToastUtils.show(returnValue.error, activity);
                     return;
                 }
-                DouyaAppUtils.setApiKeyAndSecret(returnValue.apiKey, returnValue.apiSecret);
+                DouyaUtils.setApiKeyAndSecret(returnValue.apiKey, returnValue.apiSecret);
                 activity.replaceFragment(new FinishFragment());
             } else {
-                DoubanAppUtils.installApp(activity);
+                DoubanUtils.installApp(activity);
             }
         }
     }
@@ -189,6 +189,6 @@ public class ApiKeyFragment extends Fragment implements WizardContentFragment {
     }
 
     private boolean isDoubanInstalled() {
-        return DoubanAppUtils.isInstalled(getActivity());
+        return DoubanUtils.isInstalled(getActivity());
     }
 }

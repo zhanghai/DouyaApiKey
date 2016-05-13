@@ -23,11 +23,11 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
-public class DoubanAppUtils {
+public class DoubanUtils {
 
     public static final String PACKAGE_NAME = "com.douban.frodo";
 
-    private DoubanAppUtils() {}
+    private DoubanUtils() {}
 
     public static boolean isInstalled(Context context) {
         return PackageUtils.isPackageInstalled(PACKAGE_NAME, context);
