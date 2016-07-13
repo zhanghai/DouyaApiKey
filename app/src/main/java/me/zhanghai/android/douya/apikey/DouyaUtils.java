@@ -6,10 +6,17 @@
 package me.zhanghai.android.douya.apikey;
 
 import android.content.Context;
+import android.content.Intent;
 
 public class DouyaUtils {
 
-    public static final String PACKAGE_NAME = "me.zhanghai.android.douya";
+    private static final String PACKAGE_NAME = "me.zhanghai.android.douya";
+
+    private static final String ACTION_SET_API_CREDENTIAL =
+            "me.zhanghai.android.douya.intent.action.SET_API_CREDENTIAL";
+    private static final String EXTRA_API_KEY = "me.zhanghai.android.douya.intent.extra.API_KEY";
+    private static final String EXTRA_API_SECRET =
+            "me.zhanghai.android.douya.intent.extra.API_SECRET";
 
     private DouyaUtils() {}
 
@@ -21,8 +28,11 @@ public class DouyaUtils {
         PackageUtils.installPackage(PACKAGE_NAME, context);
     }
 
-    public static void setApiKeyAndSecret(String apiKey, String apiSecret) {
-        // TODO
+    public static void setApiKeyAndSecret(String apiKey, String apiSecret, Context context) {
+        Intent intent = new Intent(ACTION_SET_API_CREDENTIAL)
+                .putExtra(EXTRA_API_KEY, apiKey)
+                .putExtra(EXTRA_API_SECRET, apiSecret);
+        context.sendBroadcast(intent);
     }
 
     public static void launch(Context context) {

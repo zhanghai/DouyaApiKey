@@ -134,7 +134,7 @@ public class ApiKeyFragment extends Fragment implements WizardContentFragment {
                 ToastUtils.show(R.string.api_key_error_empty, activity);
                 return;
             }
-            DouyaUtils.setApiKeyAndSecret(apiKey, apiSecret);
+            DouyaUtils.setApiKeyAndSecret(apiKey, apiSecret, activity);
             activity.replaceFragment(new FinishFragment());
 
         } else {
@@ -147,7 +147,7 @@ public class ApiKeyFragment extends Fragment implements WizardContentFragment {
                     ToastUtils.show(returnValue.error, activity);
                     return;
                 }
-                DouyaUtils.setApiKeyAndSecret(returnValue.apiKey, returnValue.apiSecret);
+                DouyaUtils.setApiKeyAndSecret(returnValue.apiKey, returnValue.apiSecret, activity);
                 activity.replaceFragment(new FinishFragment());
             } else {
                 DoubanUtils.installApp(activity);
