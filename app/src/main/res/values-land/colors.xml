@@ -6,5 +6,6 @@
   -->
 
 <resources>
-    <color name="wizard_statusbar_background">@color/wizard_title_background</color>
+    <color name="wizard_statusbar_background">@color/colorPrimaryDark</color>
+    <color name="wizard_title_background">@color/colorPrimary</color>
 </resources>
