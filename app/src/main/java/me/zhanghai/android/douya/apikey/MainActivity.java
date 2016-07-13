@@ -7,16 +7,10 @@ package me.zhanghai.android.douya.apikey;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.transition.Slide;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import java.io.PrintWriter;
-import java.io.StringWriter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -54,32 +48,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             mFragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
         }
-
-//        setupApiKeyAndSecret();
     }
-
-//    private void setupApiKeyAndSecret() {
-//        try {
-//            initApiKeyAndSecretOrThrow();
-//            mApiKeyText.setText(mApiKey);
-//            mApiSecretText.setText(mApiSecret);
-//        } catch (BadPaddingException | IllegalBlockSizeException
-//                | InvalidAlgorithmParameterException | InvalidKeyException
-//                | PackageManager.NameNotFoundException | NoSuchAlgorithmException
-//                | NoSuchPaddingException | UnsupportedEncodingException e) {
-//            e.printStackTrace();
-//            if (e instanceof PackageManager.NameNotFoundException) {
-//                mApiKeyText.setText(R.string.error_frodo_not_found);
-//            } else if (e instanceof BadPaddingException || e instanceof IllegalBlockSizeException
-//                    || e instanceof InvalidAlgorithmParameterException
-//                    || e instanceof InvalidKeyException) {
-//                mApiKeyText.setText(R.string.error_decryption);
-//            } else {
-//                mApiKeyText.setText(R.string.error_unexpected);
-//            }
-//            mApiSecretText.setText(getStackTrace(e));
-//        }
-//    }
 
     public void setTitleText(int textResId) {
         mTitleText.setText(textResId);
@@ -97,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .setCustomAnimations(R.anim.slide_in, R.anim.slide_out)
                 .replace(R.id.fragment_container, fragment)
-                // FIXME: Not working
                 .commit();
         mFragment = fragment;
     }
