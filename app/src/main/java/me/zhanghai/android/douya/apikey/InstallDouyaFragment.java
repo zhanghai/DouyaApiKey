@@ -14,14 +14,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class InstallDouyaFragment extends Fragment implements WizardContentFragment {
 
     private static final int REFRESH_INTERVAL_MILLI = 1000;
 
-    @Bind(R.id.refresh)
+    @BindView(R.id.refresh)
     Button mRefreshButton;
 
     private final Handler mHandler = new Handler();

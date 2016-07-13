@@ -18,14 +18,14 @@ import android.widget.TextView;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Bind(R.id.title)
+    @BindView(R.id.title)
     TextView mTitleText;
-    @Bind(R.id.forward)
+    @BindView(R.id.forward)
     Button mForwardButton;
 
     private Fragment mFragment;

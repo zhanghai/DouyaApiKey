@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ApiKeyFragment extends Fragment implements WizardContentFragment {
@@ -25,19 +25,19 @@ public class ApiKeyFragment extends Fragment implements WizardContentFragment {
 
     private static final int REFRESH_INTERVAL_MILLI = 1000;
 
-    @Bind(R.id.douban_layout)
+    @BindView(R.id.douban_layout)
     ViewGroup mDoubanLayout;
-    @Bind(R.id.douban_refresh)
+    @BindView(R.id.douban_refresh)
     Button mDoubanRefreshButton;
-    @Bind(R.id.douban_custom)
+    @BindView(R.id.douban_custom)
     Button mDoubanCustomButton;
-    @Bind(R.id.custom_layout)
+    @BindView(R.id.custom_layout)
     ViewGroup mCustomLayout;
-    @Bind(R.id.custom_douban)
+    @BindView(R.id.custom_douban)
     Button mCustomDoubanButton;
-    @Bind(R.id.custom_api_key)
+    @BindView(R.id.custom_api_key)
     EditText mCustomApiKeyEdit;
-    @Bind(R.id.custom_api_secret)
+    @BindView(R.id.custom_api_secret)
     EditText mCustomApiSecretEdit;
 
     private boolean mShowingCustom;
