@@ -5,6 +5,8 @@
 
 apply plugin: 'com.android.application'
 
+apply from: 'signing.gradle'
+
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.0"
@@ -18,8 +20,10 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
