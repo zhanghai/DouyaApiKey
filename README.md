@@ -4,11 +4,10 @@
 
 ## 预览
 
-<p><img src="screenshot/00-install-douya.png" width="32%" />
-<img src="screenshot/01-api-key-douban.jpg" width="32%" />
-<img src="screenshot/02-api-key-custom.jpg" width="32%" />
-<img src="screenshot/03-finish.png" width="34.7%" />
-<img src="screenshot/04-landscape.png" width="61.7%" /></p>
+<p><img src="screenshot/00-install-douya.png" width="49.7%" />
+<img src="screenshot/01-api-key-douban.png" width="49.7%" />
+<img src="screenshot/02-api-key-custom.png" width="49.7%" />
+<img src="screenshot/03-finish.png" width="49.7%" /></p>
 
 ## 获取
 
