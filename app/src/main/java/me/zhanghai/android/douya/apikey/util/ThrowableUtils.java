@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package me.zhanghai.android.douya.apikey;
+package me.zhanghai.android.douya.apikey.util;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

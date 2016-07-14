@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package me.zhanghai.android.douya.apikey;
+package me.zhanghai.android.douya.apikey.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import me.zhanghai.android.douya.apikey.R;
 
 public class MainActivity extends AppCompatActivity {
 

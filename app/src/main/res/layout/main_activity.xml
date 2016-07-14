@@ -12,9 +12,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="me.zhanghai.android.douya.apikey.MainActivity">
+    tools:context=".ui.MainActivity">
 
-    <me.zhanghai.android.douya.apikey.RatioFrameLayout
+    <me.zhanghai.android.douya.apikey.ui.RatioFrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="@dimen/wizard_header_elevation"
@@ -37,7 +37,7 @@
                 android:layout_marginRight="@dimen/wizard_content_horizontal_margin"
                 android:textAppearance="@style/TextAppearance.Wizard.Title" />
         </FrameLayout>
-    </me.zhanghai.android.douya.apikey.RatioFrameLayout>
+    </me.zhanghai.android.douya.apikey.ui.RatioFrameLayout>
 
     <FrameLayout
         android:id="@+id/fragment_container"

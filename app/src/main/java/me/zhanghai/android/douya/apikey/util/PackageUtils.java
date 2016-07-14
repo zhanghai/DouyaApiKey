@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package me.zhanghai.android.douya.apikey;
+package me.zhanghai.android.douya.apikey.util;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -11,6 +11,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.widget.Toast;
+
+import me.zhanghai.android.douya.apikey.R;
 
 public class PackageUtils {
 

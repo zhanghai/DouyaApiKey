@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package me.zhanghai.android.douya.apikey;
+package me.zhanghai.android.douya.apikey.ui;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -12,6 +12,8 @@ import android.os.Build;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
+
+import me.zhanghai.android.douya.apikey.R;
 
 public class RatioFrameLayout extends FrameLayout {
 

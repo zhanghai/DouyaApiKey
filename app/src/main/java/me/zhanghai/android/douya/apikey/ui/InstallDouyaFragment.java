@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package me.zhanghai.android.douya.apikey;
+package me.zhanghai.android.douya.apikey.ui;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,6 +16,8 @@ import android.widget.Button;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import me.zhanghai.android.douya.apikey.R;
+import me.zhanghai.android.douya.apikey.util.DouyaUtils;
 
 public class InstallDouyaFragment extends Fragment implements WizardContentFragment {
 

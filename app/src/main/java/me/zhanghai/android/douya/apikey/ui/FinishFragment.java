@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package me.zhanghai.android.douya.apikey;
+package me.zhanghai.android.douya.apikey.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +11,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import me.zhanghai.android.douya.apikey.R;
+import me.zhanghai.android.douya.apikey.util.DouyaUtils;
 
 public class FinishFragment extends Fragment implements WizardContentFragment {
 
