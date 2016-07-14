@@ -7,9 +7,8 @@
 
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Base.Theme.DouyaApiKey" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="android:statusBarColor">@color/wizard_statusbar_background</item>
         <item name="windowActionBar">false</item>
         <item name="windowActionModeOverlay">true</item>
         <item name="android:windowBackground">@color/wizard_content_background</item>
@@ -22,4 +21,6 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="Theme.DouyaApiKey" parent="Base.Theme.DouyaApiKey" />
 </resources>
