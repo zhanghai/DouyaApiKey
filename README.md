@@ -13,7 +13,7 @@
 
 *目前豆芽 1.0.0-alpha.2 尚未发布，因此除非您手动构建豆芽，本应用暂时无法使用。*
 
-请在 [Releases](https://github.com/DreaminginCodeZH/DouyaApiKey/releases/latest) 中下载并安装应用。
+请在 [Release](https://github.com/DreaminginCodeZH/DouyaApiKey/releases/latest) 中下载并安装应用。
 
 暂时没有内置的更新渠道，请关注本项目的 Release。
 
