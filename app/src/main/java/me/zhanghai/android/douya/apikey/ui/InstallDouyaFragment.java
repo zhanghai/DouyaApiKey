@@ -18,6 +18,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import me.zhanghai.android.douya.apikey.R;
 import me.zhanghai.android.douya.apikey.util.DouyaUtils;
+import me.zhanghai.android.douya.apikey.util.ToastUtils;
 
 public class InstallDouyaFragment extends Fragment implements WizardContentFragment {
 
@@ -30,7 +31,7 @@ public class InstallDouyaFragment extends Fragment implements WizardContentFragm
     private final Runnable mRefreshRunnable = new Runnable() {
         @Override
         public void run() {
-            refresh();
+            refresh(false);
             mHandler.postDelayed(this, REFRESH_INTERVAL_MILLI);
         }
     };
@@ -59,7 +60,7 @@ public class InstallDouyaFragment extends Fragment implements WizardContentFragm
         mRefreshButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                refresh();
+                refresh(true);
             }
         });
     }
@@ -80,27 +81,36 @@ public class InstallDouyaFragment extends Fragment implements WizardContentFragm
 
     @Override
     public void onForward() {
-        refresh();
+        refresh(false);
         MainActivity activity = (MainActivity) getActivity();
-        if (isDouyaInstalled()) {
+        if (hasDouyaWithMinimumVersion()) {
             activity.replaceFragment(new ApiKeyFragment());
         } else {
             DouyaUtils.installApp(activity);
         }
     }
 
-    private void refresh() {
+    private void refresh(boolean showToast) {
         MainActivity activity = (MainActivity) getActivity();
-        if (isDouyaInstalled()) {
+        if (hasDouyaWithMinimumVersion()) {
             mRefreshButton.setText(R.string.install_douya_action_refresh_forward);
             activity.setForwardText(R.string.install_douya_forward_forward);
         } else {
             mRefreshButton.setText(R.string.install_douya_action_refresh_refresh);
             activity.setForwardText(R.string.install_douya_forward_install);
+            if (showToast) {
+                ToastUtils.show(isDouyaInstalled() ?
+                        R.string.install_douya_toast_lower_than_minimum_version
+                        : R.string.install_douya_toast_not_installed, activity);
+            }
         }
     }
 
     private boolean isDouyaInstalled() {
         return DouyaUtils.isInstalled(getActivity());
+    }
+
+    private boolean hasDouyaWithMinimumVersion() {
+        return DouyaUtils.hasMinimumVersion(getActivity());
     }
 }

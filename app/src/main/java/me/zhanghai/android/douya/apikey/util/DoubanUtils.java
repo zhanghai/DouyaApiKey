@@ -32,11 +32,11 @@ public class DoubanUtils {
     private DoubanUtils() {}
 
     public static boolean isInstalled(Context context) {
-        return PackageUtils.isPackageInstalled(PACKAGE_NAME, context);
+        return PackageUtils.isInstalled(PACKAGE_NAME, context);
     }
 
     public static void installApp(Context context) {
-        PackageUtils.installPackage(PACKAGE_NAME, context);
+        PackageUtils.install(PACKAGE_NAME, context);
     }
 
     public static GetApiKeyAndSecretReturnValue getApiKeyAndSecret(Context context) {

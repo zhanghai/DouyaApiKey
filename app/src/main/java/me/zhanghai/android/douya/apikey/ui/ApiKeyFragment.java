@@ -51,7 +51,7 @@ public class ApiKeyFragment extends Fragment implements WizardContentFragment {
     private final Runnable mRefreshDoubanRunnable = new Runnable() {
         @Override
         public void run() {
-            refreshDouban();
+            refreshDouban(false);
             mHandler.postDelayed(this, REFRESH_INTERVAL_MILLI);
         }
     };
@@ -88,10 +88,9 @@ public class ApiKeyFragment extends Fragment implements WizardContentFragment {
         mDoubanRefreshButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                refreshDouban();
+                refreshDouban(true);
             }
         });
-        refreshDouban();
         mDoubanCustomButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -144,7 +143,7 @@ public class ApiKeyFragment extends Fragment implements WizardContentFragment {
 
         } else {
 
-            refreshDouban();
+            refreshDouban(false);
             if (isDoubanInstalled()) {
                 DoubanUtils.GetApiKeyAndSecretReturnValue returnValue =
                         DoubanUtils.getApiKeyAndSecret(activity);
@@ -172,13 +171,13 @@ public class ApiKeyFragment extends Fragment implements WizardContentFragment {
             activity.setForwardText(R.string.api_key_forward_set);
         } else {
             AnimationUtils.fadeOutThenFadeIn(mCustomLayout, mDoubanLayout);
-            refreshDouban();
+            refreshDouban(false);
         }
 
         mShowingCustom = showingCustom;
     }
 
-    private void refreshDouban() {
+    private void refreshDouban(boolean showToast) {
         if (mShowingCustom) {
             return;
         }
@@ -190,6 +189,9 @@ public class ApiKeyFragment extends Fragment implements WizardContentFragment {
         } else {
             activity.setForwardText(R.string.api_key_forward_install);
             mDoubanRefreshButton.setText(R.string.api_key_douban_action_refresh_refresh);
+            if (showToast) {
+                ToastUtils.show(R.string.api_key_douban_toast_not_installed, activity);
+            }
         }
     }
 

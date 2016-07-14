@@ -15,6 +15,8 @@
     <string name="install_douya_content">这个应用可以为豆芽提供 API Key，从而使得豆芽可以访问豆瓣 API 获取数据。\n\n为了进行设置，您需要首先安装豆芽。</string>
     <string name="install_douya_action_refresh_refresh">我已安装豆芽，请重新检查</string>
     <string name="install_douya_action_refresh_forward">您已安装豆芽，请点击“继续”</string>
+    <string name="install_douya_toast_not_installed">未找到豆芽，请点击“安装豆芽”</string>
+    <string name="install_douya_toast_lower_than_minimum_version">豆芽版本过低，请点击“安装豆芽”以更新</string>
     <string name="install_douya_forward_install">安装豆芽</string>
     <string name="install_douya_forward_forward">继续</string>
 
@@ -24,6 +26,7 @@
     <string name="api_key_douban_action_refresh_forward">您已安装豆瓣，请点击“设置”以继续</string>
     <string name="api_key_douban_content_custom">或者，如果您希望进行自定义，您也可以：</string>
     <string name="api_key_douban_action_custom">手动填写 API Key</string>
+    <string name="api_key_douban_toast_not_installed">未找到豆瓣，请点击“安装豆瓣”</string>
     <string name="api_key_custom_content_custom">自定义 API Key：</string>
     <string name="api_key_custom_api_key_hint">豆瓣 API Key</string>
     <string name="api_key_custom_api_secret_hint">豆瓣 API Secret</string>

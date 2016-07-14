@@ -11,6 +11,7 @@ import android.content.Intent;
 public class DouyaUtils {
 
     private static final String PACKAGE_NAME = "me.zhanghai.android.douya";
+    private static final int MINIMUM_VERSION_CODE = 2;
 
     private static final String ACTION_SET_API_CREDENTIAL =
             "me.zhanghai.android.douya.intent.action.SET_API_CREDENTIAL";
@@ -21,11 +22,15 @@ public class DouyaUtils {
     private DouyaUtils() {}
 
     public static boolean isInstalled(Context context) {
-        return PackageUtils.isPackageInstalled(PACKAGE_NAME, context);
+        return PackageUtils.isInstalled(PACKAGE_NAME, context);
+    }
+
+    public static boolean hasMinimumVersion(Context context) {
+        return PackageUtils.hasMinimumVersion(PACKAGE_NAME, MINIMUM_VERSION_CODE, context);
     }
 
     public static void installApp(Context context) {
-        PackageUtils.installPackage(PACKAGE_NAME, context);
+        PackageUtils.install(PACKAGE_NAME, context);
     }
 
     public static void setApiKeyAndSecret(String apiKey, String apiSecret, Context context) {

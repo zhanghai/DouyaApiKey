@@ -18,7 +18,7 @@ public class PackageUtils {
 
     private PackageUtils() {}
 
-    public static boolean isPackageInstalled(String packageName, Context context) {
+    public static boolean isInstalled(String packageName, Context context) {
         try {
             context.getPackageManager().getPackageInfo(packageName, 0);
             return true;
@@ -27,7 +27,17 @@ public class PackageUtils {
         }
     }
 
-    public static void installPackage(String packageName, Context context) {
+    public static boolean hasMinimumVersion(String packageName, int minimumVersionCode,
+                                            Context context) {
+        try {
+            return context.getPackageManager().getPackageInfo(packageName, 0).versionCode
+                    >= minimumVersionCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
+
+    public static void install(String packageName, Context context) {
         try {
             context.startActivity(IntentUtils.makeViewAppInMarket(packageName));
         } catch (ActivityNotFoundException e) {
