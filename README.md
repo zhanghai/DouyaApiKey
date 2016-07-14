@@ -17,7 +17,7 @@
 
 暂时没有内置的更新渠道，请关注本项目的 Release。
 
-## 许可
+## 许可证
 
 ```
 Copyright 2016 Zhang Hai
