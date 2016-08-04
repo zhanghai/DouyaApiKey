@@ -2,6 +2,8 @@
 
 本应用可以为[豆芽](https://github.com/DreaminginCodeZH/Douya)设置 API Key。
 
+![Travis CI](https://travis-ci.org/DreaminginCodeZH/DouyaApiKey.svg)
+
 ## 预览
 
 <p><img src="screenshot/00-install-douya.png" width="49.7%" />
