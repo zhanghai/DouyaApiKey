@@ -40,10 +40,14 @@ public class ApiKeyFragment extends Fragment implements WizardContentFragment {
     ViewGroup mCustomLayout;
     @BindView(R.id.custom_douban)
     Button mCustomDoubanButton;
-    @BindView(R.id.custom_api_key)
-    EditText mCustomApiKeyEdit;
-    @BindView(R.id.custom_api_secret)
-    EditText mCustomApiSecretEdit;
+    @BindView(R.id.custom_api_v2_api_key)
+    EditText mCustomApiV2ApiKeyEdit;
+    @BindView(R.id.custom_api_v2_api_secret)
+    EditText mCustomApiV2ApiSecretEdit;
+    @BindView(R.id.custom_frodo_api_key)
+    EditText mCustomFrodoApiKeyEdit;
+    @BindView(R.id.custom_frodo_api_secret)
+    EditText mCustomFrodoApiSecretEdit;
 
     private boolean mShowingCustom;
 
@@ -132,13 +136,17 @@ public class ApiKeyFragment extends Fragment implements WizardContentFragment {
         MainActivity activity = (MainActivity) getActivity();
         if (mShowingCustom) {
 
-            String apiKey = mCustomApiKeyEdit.getText().toString();
-            String apiSecret = mCustomApiSecretEdit.getText().toString();
-            if (apiKey.isEmpty() || apiSecret.isEmpty()) {
+            String apiV2ApiKey = mCustomApiV2ApiKeyEdit.getText().toString();
+            String apiV2ApiSecret = mCustomApiV2ApiSecretEdit.getText().toString();
+            String frodoApiKey = mCustomFrodoApiKeyEdit.getText().toString();
+            String frodoApiSecret = mCustomFrodoApiSecretEdit.getText().toString();
+            if (apiV2ApiKey.isEmpty() || apiV2ApiSecret.isEmpty() || frodoApiKey.isEmpty()
+                    || frodoApiSecret.isEmpty()) {
                 ToastUtils.show(R.string.api_key_error_empty, activity);
                 return;
             }
-            DouyaUtils.setApiKeyAndSecret(apiKey, apiSecret, activity);
+            DouyaUtils.setApiKeyAndSecret(apiV2ApiKey, apiV2ApiSecret, frodoApiKey, frodoApiSecret,
+                    activity);
             activity.replaceFragment(new FinishFragment());
 
         } else {
@@ -151,7 +159,8 @@ public class ApiKeyFragment extends Fragment implements WizardContentFragment {
                     ToastUtils.show(returnValue.error, activity);
                     return;
                 }
-                DouyaUtils.setApiKeyAndSecret(returnValue.apiKey, returnValue.apiSecret, activity);
+                DouyaUtils.setApiKeyAndSecret(returnValue.apiV2ApiKey, returnValue.apiV2ApiSecret,
+                        returnValue.frodoApiKey, returnValue.frodoApiSecret, activity);
                 activity.replaceFragment(new FinishFragment());
             } else {
                 DoubanUtils.installApp(activity);

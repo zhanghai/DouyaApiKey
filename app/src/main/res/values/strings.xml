@@ -28,13 +28,15 @@
     <string name="api_key_douban_action_custom">手动填写 API Key</string>
     <string name="api_key_douban_toast_not_installed">未找到豆瓣，请点击“安装豆瓣”</string>
     <string name="api_key_custom_content_custom">自定义 API Key：</string>
-    <string name="api_key_custom_api_key_hint">豆瓣 API Key</string>
-    <string name="api_key_custom_api_secret_hint">豆瓣 API Secret</string>
+    <string name="api_key_custom_api_v2_api_key_hint">API V2 API Key</string>
+    <string name="api_key_custom_api_v2_api_secret_hint">API V2 API Secret</string>
+    <string name="api_key_custom_frodo_api_key_hint">Frodo API Key</string>
+    <string name="api_key_custom_frodo_api_secret_hint">Frodo API Secret</string>
     <string name="api_key_custom_content_douban">或者，如果您没有这些信息，您也可以：</string>
     <string name="api_key_custom_action_douban">通过豆瓣官方应用获取 API Key</string>
     <string name="api_key_forward_install">安装豆瓣</string>
     <string name="api_key_forward_set">设置</string>
-    <string name="api_key_error_empty">您尚未填写完成 API Key/Secret</string>
+    <string name="api_key_error_empty">您尚未填写完成 API Key / Secret</string>
 
     <string name="finish_title">设置完成</string>
     <string name="finish_content">已成功为豆芽设置 API Key，您可以点击“打开豆芽”尝试登录。</string>

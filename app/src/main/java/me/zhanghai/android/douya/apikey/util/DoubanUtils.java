@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.util.Base64;
+import android.util.Log;
 
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidAlgorithmParameterException;
@@ -59,14 +60,20 @@ public class DoubanUtils {
             SecretKeySpec key = new SecretKeySpec(builder.toString().getBytes("UTF-8"), "AES");
 
             Cipher cipher = Cipher.getInstance("AES/CBC/NoPadding");
-            cipher.init(Cipher.DECRYPT_MODE, key, new IvParameterSpec("DOUBANFRODOAPPIV".getBytes()));
+            cipher.init(Cipher.DECRYPT_MODE, key, new IvParameterSpec(
+                    "DOUBANFRODOAPPIV".getBytes()));
 
-            returnValue.apiKey = new String(cipher.doFinal(Base64.decode(
+            returnValue.apiV2ApiKey = new String(cipher.doFinal(Base64.decode(
+                    "+H/RVIwKFXHqNsb6bnXFlRIH0Y9GCqPQO/38NgzTt3g=", Base64.DEFAULT)));
+            returnValue.apiV2ApiSecret = new String(cipher.doFinal(Base64.decode(
+                    "hTwIRVgPq1BS/Olwtv4Vfg==", Base64.DEFAULT)));
+            returnValue.frodoApiKey = new String(cipher.doFinal(Base64.decode(
                     "74CwfJd4+7LYgFhXi1cx0IQC35UQqYVFycCE+EVyw1E=", Base64.DEFAULT)));
-            returnValue.apiSecret = new String(cipher.doFinal(Base64.decode(
+            returnValue.frodoApiSecret = new String(cipher.doFinal(Base64.decode(
                     "MkFm2XdTnoPKFKXu1gveBQ==", Base64.DEFAULT)));
             returnValue.isSuccessful = true;
             return returnValue;
+
         } catch (BadPaddingException | IllegalBlockSizeException
                 | InvalidAlgorithmParameterException | InvalidKeyException
                 | PackageManager.NameNotFoundException | NoSuchAlgorithmException
@@ -90,8 +97,10 @@ public class DoubanUtils {
 
     public static class GetApiKeyAndSecretReturnValue {
         public boolean isSuccessful;
-        public String apiKey;
-        public String apiSecret;
+        public String frodoApiKey;
+        public String frodoApiSecret;
+        public String apiV2ApiKey;
+        public String apiV2ApiSecret;
         public String error;
     }
 }

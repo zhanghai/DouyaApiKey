@@ -15,9 +15,14 @@ public class DouyaUtils {
 
     private static final String ACTION_SET_API_CREDENTIAL =
             "me.zhanghai.android.douya.intent.action.SET_API_CREDENTIAL";
-    private static final String EXTRA_API_KEY = "me.zhanghai.android.douya.intent.extra.API_KEY";
-    private static final String EXTRA_API_SECRET =
-            "me.zhanghai.android.douya.intent.extra.API_SECRET";
+    private static final String EXTRA_API_V2_API_KEY =
+            "me.zhanghai.android.douya.intent.extra.API_V2_API_KEY";
+    private static final String EXTRA_API_V2_API_SECRET =
+            "me.zhanghai.android.douya.intent.extra.API_V2_API_SECRET";
+    private static final String EXTRA_FRODO_API_KEY =
+            "me.zhanghai.android.douya.intent.extra.FRODO_API_KEY";
+    private static final String EXTRA_FRODO_API_SECRET =
+            "me.zhanghai.android.douya.intent.extra.FRODO_API_SECRET";
 
     private DouyaUtils() {}
 
@@ -33,10 +38,14 @@ public class DouyaUtils {
         PackageUtils.install(PACKAGE_NAME, context);
     }
 
-    public static void setApiKeyAndSecret(String apiKey, String apiSecret, Context context) {
+    public static void setApiKeyAndSecret(String apiV2apiKey, String apiV2apiSecret,
+                                          String frodoApiKey, String frodoApiSecret,
+                                          Context context) {
         Intent intent = new Intent(ACTION_SET_API_CREDENTIAL)
-                .putExtra(EXTRA_API_KEY, apiKey)
-                .putExtra(EXTRA_API_SECRET, apiSecret);
+                .putExtra(EXTRA_API_V2_API_KEY, apiV2apiKey)
+                .putExtra(EXTRA_API_V2_API_SECRET, apiV2apiSecret)
+                .putExtra(EXTRA_FRODO_API_KEY, frodoApiKey)
+                .putExtra(EXTRA_FRODO_API_SECRET, frodoApiSecret);
         context.sendBroadcast(intent);
     }
 

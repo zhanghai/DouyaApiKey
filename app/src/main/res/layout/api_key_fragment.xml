@@ -79,25 +79,45 @@
                 android:textAppearance="@style/TextAppearance.Wizard.Content" />
 
             <me.zhanghai.android.materialedittext.MaterialEditText
-                android:id="@+id/custom_api_key"
+                android:id="@+id/custom_api_v2_api_key"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/wizard_content_horizontal_margin_with_4dp_padding"
                 android:layout_marginRight="@dimen/wizard_content_horizontal_margin_with_4dp_padding"
                 android:layout_marginTop="4dp"
-                android:hint="@string/api_key_custom_api_key_hint"
+                android:hint="@string/api_key_custom_api_v2_api_key_hint"
                 android:inputType="text"
                 android:maxLines="1" />
 
             <me.zhanghai.android.materialedittext.MaterialEditText
-                android:id="@+id/custom_api_secret"
+                android:id="@+id/custom_api_v2_api_secret"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/wizard_content_horizontal_margin_with_4dp_padding"
+                android:layout_marginRight="@dimen/wizard_content_horizontal_margin_with_4dp_padding"
+                android:hint="@string/api_key_custom_api_v2_api_secret_hint"
+                android:inputType="text"
+                android:maxLines="1" />
+
+            <me.zhanghai.android.materialedittext.MaterialEditText
+                android:id="@+id/custom_frodo_api_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/wizard_content_horizontal_margin_with_4dp_padding"
+                android:layout_marginRight="@dimen/wizard_content_horizontal_margin_with_4dp_padding"
+                android:hint="@string/api_key_custom_frodo_api_key_hint"
+                android:inputType="text"
+                android:maxLines="1" />
+
+            <me.zhanghai.android.materialedittext.MaterialEditText
+                android:id="@+id/custom_frodo_api_secret"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/wizard_content_horizontal_margin_with_4dp_padding"
                 android:layout_marginRight="@dimen/wizard_content_horizontal_margin_with_4dp_padding"
                 android:layout_marginBottom="@dimen/wizard_content_vertical_margin_with_8dp_padding"
-                android:hint="@string/api_key_custom_api_secret_hint"
-                android:imeActionId="@+id/ime_login"
+                android:hint="@string/api_key_custom_frodo_api_secret_hint"
+                android:imeActionId="@+id/ime_set"
                 android:imeActionLabel="@string/api_key_forward_set"
                 android:imeOptions="actionDone"
                 android:inputType="text"
