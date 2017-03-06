@@ -41,12 +41,12 @@ public class DouyaUtils {
     public static void setApiKeyAndSecret(String apiV2apiKey, String apiV2apiSecret,
                                           String frodoApiKey, String frodoApiSecret,
                                           Context context) {
-        Intent intent = new Intent(ACTION_SET_API_CREDENTIAL)
+        context.sendBroadcast(new Intent(ACTION_SET_API_CREDENTIAL)
                 .putExtra(EXTRA_API_V2_API_KEY, apiV2apiKey)
                 .putExtra(EXTRA_API_V2_API_SECRET, apiV2apiSecret)
                 .putExtra(EXTRA_FRODO_API_KEY, frodoApiKey)
-                .putExtra(EXTRA_FRODO_API_SECRET, frodoApiSecret);
-        context.sendBroadcast(intent);
+                .putExtra(EXTRA_FRODO_API_SECRET, frodoApiSecret)
+                .addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES));
     }
 
     public static void launch(Context context) {
