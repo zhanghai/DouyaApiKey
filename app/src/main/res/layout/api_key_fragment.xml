@@ -117,7 +117,7 @@
                 android:layout_marginRight="@dimen/wizard_content_horizontal_margin_with_4dp_padding"
                 android:layout_marginBottom="@dimen/wizard_content_vertical_margin_with_8dp_padding"
                 android:hint="@string/api_key_custom_frodo_api_secret_hint"
-                android:imeActionId="@+id/ime_set"
+                android:imeActionId="@integer/ime_action_done"
                 android:imeActionLabel="@string/api_key_forward_set"
                 android:imeOptions="actionDone"
                 android:inputType="text"

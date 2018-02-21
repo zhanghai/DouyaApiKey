@@ -9,11 +9,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -99,6 +102,17 @@ public class ApiKeyFragment extends Fragment implements WizardContentFragment {
             @Override
             public void onClick(View view) {
                 setShowingCustom(true);
+            }
+        });
+        mCustomFrodoApiSecretEdit.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE
+                        || actionId == EditorInfo.IME_ACTION_UNSPECIFIED) {
+                    onForward();
+                    return true;
+                }
+                return false;
             }
         });
         mCustomDoubanButton.setOnClickListener(new View.OnClickListener() {
