@@ -5,6 +5,7 @@
 
 package me.zhanghai.android.douya.apikey.util;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 
@@ -13,8 +14,8 @@ public class DouyaUtils {
     private static final String PACKAGE_NAME = "me.zhanghai.android.douya";
     private static final int MINIMUM_VERSION_CODE = 2;
 
-    private static final String ACTION_SET_API_CREDENTIAL =
-            "me.zhanghai.android.douya.intent.action.SET_API_CREDENTIAL";
+    private static final String RECEIVER_NAME = PACKAGE_NAME
+            + ".network.api.credential.SetApiCredentialReceiver";
     private static final String EXTRA_API_V2_API_KEY =
             "me.zhanghai.android.douya.intent.extra.API_V2_API_KEY";
     private static final String EXTRA_API_V2_API_SECRET =
@@ -41,7 +42,8 @@ public class DouyaUtils {
     public static void setApiKeyAndSecret(String apiV2apiKey, String apiV2apiSecret,
                                           String frodoApiKey, String frodoApiSecret,
                                           Context context) {
-        context.sendBroadcast(new Intent(ACTION_SET_API_CREDENTIAL)
+        context.sendBroadcast(new Intent()
+                .setComponent(new ComponentName(PACKAGE_NAME, RECEIVER_NAME))
                 .putExtra(EXTRA_API_V2_API_KEY, apiV2apiKey)
                 .putExtra(EXTRA_API_V2_API_SECRET, apiV2apiSecret)
                 .putExtra(EXTRA_FRODO_API_KEY, frodoApiKey)
