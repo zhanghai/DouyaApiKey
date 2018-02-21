@@ -14,7 +14,7 @@ public class DouyaUtils {
     private static final String PACKAGE_NAME = "me.zhanghai.android.douya";
     private static final int MINIMUM_VERSION_CODE = 2;
 
-    private static final String RECEIVER_NAME = PACKAGE_NAME
+    private static final String RECEIVER_CLASS_NAME = PACKAGE_NAME
             + ".network.api.credential.SetApiCredentialReceiver";
     private static final String EXTRA_API_V2_API_KEY =
             "me.zhanghai.android.douya.intent.extra.API_V2_API_KEY";
@@ -43,7 +43,7 @@ public class DouyaUtils {
                                           String frodoApiKey, String frodoApiSecret,
                                           Context context) {
         context.sendBroadcast(new Intent()
-                .setComponent(new ComponentName(PACKAGE_NAME, RECEIVER_NAME))
+                .setComponent(new ComponentName(PACKAGE_NAME, RECEIVER_CLASS_NAME))
                 .putExtra(EXTRA_API_V2_API_KEY, apiV2apiKey)
                 .putExtra(EXTRA_API_V2_API_SECRET, apiV2apiSecret)
                 .putExtra(EXTRA_FRODO_API_KEY, frodoApiKey)
