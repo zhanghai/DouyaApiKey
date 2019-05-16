@@ -1,8 +1,8 @@
 # 豆芽 API Key 设置向导
 
-本应用可以为[豆芽](https://github.com/DreaminginCodeZH/Douya)设置 API Key。
+本应用可以为[豆芽](https://github.com/zhanghai/Douya)设置 API Key。
 
-![Travis CI](https://travis-ci.org/DreaminginCodeZH/DouyaApiKey.svg)
+![Travis CI](https://travis-ci.org/zhanghai/DouyaApiKey.svg)
 
 ## 预览
 
@@ -13,7 +13,7 @@
 
 ## 获取
 
-请在 [Releases](https://github.com/DreaminginCodeZH/DouyaApiKey/releases) 中下载并安装应用。
+请在 [Releases](https://github.com/zhanghai/DouyaApiKey/releases) 中下载并安装应用。
 
 暂时没有内置的更新渠道，请关注本项目的 Releases。
 
